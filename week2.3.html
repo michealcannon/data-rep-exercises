@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>hidden html</title>
+    </head>
+    <body>
+        <div>
+            <input id = "name" type = "text"/>
+            <button onclick="myFunction()">click me</button>
+        </div>
+        <div id = "output">
+            
+        </div>
+        
+    </body>
+    <script>
+        myFunction() 
+            {
+                var output = document.getElementById("name").value
+                document.getElementById("output").innerText = output
+        }
+            
+        
+    </script>
+</html>
