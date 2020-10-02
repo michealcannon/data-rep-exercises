@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>2.7</title>
+    </head>
+    <body>
+        <div id = "output">
+            output here
+        </div>
+        <script>
+            for(i = 0; i<10; i++){
+                console.log(i)
+            }
+
+            var names = ["Joe", "Mary", "Fred"]
+            var output = ""
+            for(name of names){
+                output += name + " "
+            }
+            document.getElementById("output").innerText = output
+        </script>
+    </body>
+</html>
