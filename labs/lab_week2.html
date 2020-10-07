@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+    <title>View cars</title>
+    </head>
+    <body>
+        <h1>Cars</h1>
+        <div><button id = "showCreateButton" onclick = showCreate()>Create</button></div>
+        <div>
+            <table class = "table" id="carTable" border="1">
+                <tr>
+                    <th>reg</th>
+                    <th>make</th>
+                    <th>model</th>
+                    <th>price</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+                <tr>
+                    <td>191 M0 123</td>
+                    <td>Ford</td>
+                    <td>Mondeo</td>
+                    <td>4,000</td>
+                    <td><button>update</button></td>
+                    <td><button>delete</button></td>
+
+                </tr>
+                <tr>
+                    <td>12 D 123</td>
+                    <td>Fiat</td>
+                    <td>Punto</td>
+                    <td>123</td>
+                    <td><button>update</button></td>
+                    <td><button>delete</button></td>
+
+                </tr>
+                <tr>
+                    <td>08 G 123</td>
+                    <td>Nissan</td>
+                    <td>Almera</td>
+                    <td>500</td>
+                    <td><button>update</button></td>
+                    <td><button>delete</button></td>
+
+                </tr>
+
+            </table>
+               
+        </div>
+        <div id='createUpdateForm' style="display: none">
+            <h2><span id = "createLabel">Create a</span> <span id = "updateLabel">Update this</span> Car</h2>
+            Reg <input type="text" name="reg"><br/>
+            Make <select name="make">
+            <option value="Ford">Ford</option>
+            <option value="Fiat">Fiat</option>
+            <option value="Nissan">Nissan</option>
+            </select><br/>
+            Model <input type="text" name="model"><br/>
+            Price <input type="number" name="price"><br/>
+            <span><button id="doCreateButton" onclick="doCreate()"></button>>Create</button></span>
+            <span><button id = "doUpdateButton" onclick = "doUpdate()">Update</button></span>
+        </div>
+
+    </body>
+    <Script>
+        function showCreate(){
+                document.getElementById('showCreateButton').style.display="none"
+                document.getElementById('carTable').style.display="none"
+                document.getElementById('createUpdateForm').style.display="block"
+            }
+    </Script> 
+
+</html>
+
+
+
+
+
