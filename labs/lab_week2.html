@@ -84,7 +84,7 @@
             document.getElementById('doCreateButton').style.display="none"
             document.getElementById('createLabel').style.display="none"
             var rowElement = buttonElement.parentNode.parentNode
-            getCarFromRow(rowElement)
+            var car = getCarFromRow(rowElement)
             populateFormWithCar(car)
         }
         function doCreate(){
