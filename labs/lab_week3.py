@@ -9,11 +9,14 @@ page = requests.get(url)
 soup = BeautifulSoup(page.content, 'xml')
 # print (soup.prettify())
 
-listings = soup.findAll("objTrainPositions")
-for listing in listings:
-   # print(listing)
-
-    print(listing.TrainLatitude.string)
+with open('week03_train.csv', mode='w') as train_file:
+    train_writer = csv.writer(train_file, delimiter='\t', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+    listings = soup.findAll("objTrainPositions")
+    for listing in listings:
+# print(listing)
+        entryList = []
+# print(listing.TrainLatitude.string)
 # or
-# print(listing.find('TrainLatitude').string)
+        entryList.append(print(listing.find('TrainLatitude').string))
+        train_writer.writerow(entryList)
 
