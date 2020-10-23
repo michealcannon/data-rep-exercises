@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>
+            Lab02
+        </title>
+    </head>
+    <body>
+
+    </body>
+    <script>
+        var jsonString = {"employees": [{"firstName": "John", "lastName": "Doe"},{
+"firstName": "Anna","lastName": "Smith"},{"firstName": "Peter",
+"lastName": "Jones"}]};
+        //var obj = JSON.parse(jsonString);   // got error message with this code, found solution here https://stackoverflow.com/questions/15617164/parsing-json-giving-unexpected-token-o-error/15617201
+        var employees = jsonString.employees;
+        for (employee of employees){            // loop through employees to print first name to console
+            console.log(employee.firstName);
+        }
+        
+    </script>
+</html>
