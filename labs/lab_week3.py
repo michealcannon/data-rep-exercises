@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 retrieveTags=['TrainStatus',
 'TrainLatitude',
 'TrainLongitude',
-'TrainCode',
+'TrainCode', n
 'TrainDate',
 'PublicMessage',
 'Direction'
